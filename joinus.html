@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join Us Form</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        transition: 0.3s ease;
+        overflow-x: hidden;
+    }
+
+    /* Blur when popup active */
+    .blur-active {
+        filter: blur(5px);
+        pointer-events: none;
+    }
+
+    /* Popup Background Overlay */
+    #popupOverlay {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(173,216,230,0.55);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+
+    /* Popup Box */
+    #popupBox {
+        width: 90%;
+        max-width: 550px;
+        background: #fefefe;
+        padding: 25px;
+        border-radius: 12px;
+        position: relative;
+        box-shadow: 0 0 20px rgba(0,0,0,0.4);
+        animation: fadeIn 0.3s;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Close button */
+    .closeBtn {
+        position: absolute;
+        right: 12px;
+        top: 10px;
+        font-size: 22px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    /* Labels and Inputs */
+    label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 6px;
+        border: 1px solid #999;
+        font-size: 16px;
+    }
+
+    /* Submit Button */
+    #submitBtn {
+        width: 100%;
+        padding: 12px;
+        margin-top: 18px;
+        background: black;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 17px;
+    }
+
+    #submitBtn:hover {
+        opacity: 0.85;
+    }
+
+    /* Error Message */
+    .error {
+        color: rgba(255, 0, 0, 0.336);
+        font-size: 14px;
+        margin-top: 4px;
+        display: none;
+    }
+
+</style>
+</head>
+
+<body>
+
+<!-- PAGE CONTENT (This will blur) -->
+<div id="pageContent">
+    <div style="background:black;color:white;padding:10px;">Top Bar</div>
+    <div style="background:#222;color:white;padding:10px;">Navbar</div>
+
+    <h2 style="padding:20px;">Join Us Page</h2>
+    <p style="padding:20px;">Page content here...</p>
+</div>
+
+<!-- POPUP OVERLAY -->
+<div id="popupOverlay">
+    <div id="popupBox">
+
+        <div class="closeBtn" onclick="closePopup()">✖</div>
+
+        <h2 style="text-align:center;">Join Us</h2>
+
+        <label>First Name</label>
+        <input type="text" id="fname">
+        <div id="fnameError" class="error">Only alphabets allowed</div>
+
+        <label>Last Name</label>
+        <input type="text" id="lname">
+        <div id="lnameError" class="error">Only alphabets allowed</div>
+
+        <label>Email</label>
+        <input type="text" id="email">
+        <div id="emailError" class="error">Invalid email format</div>
+
+        <label>Contact Number</label>
+        <input type="text" id="contact">
+
+        <label>Department</label>
+        <select id="dept">
+            <option value="">Select</option>
+            <option>CSE</option>
+            <option>EEE</option>
+            <option>CIS</option>
+            <option>NFE</option>
+            <option>MCJ</option>
+            <option>CE</option>
+        </select>
+
+        <label>Semester</label>
+        <select id="sem">
+            <option value="">Select</option>
+            
+                <Option>1</Option>
+                <Option>2</Option>
+                <Option>3</Option>
+                <Option>4</Option>
+                <Option>5</Option>
+                <Option>6</Option>
+                <Option>7</Option>
+                <Option>8</Option>
+                
+            
+        </select>
+
+        <button id="submitBtn" onclick="validateForm()">Submit</button>
+    </div>
+</div>
+
+<script>
+    // Auto Open Popup if URL contains ?from=
+    const urlParams = new URLSearchParams(window.location.search);
+    const fromPage = urlParams.get("from");
+
+    if (fromPage) {
+        openPopup();
+    }
+
+    function openPopup() {
+        document.getElementById("popupOverlay").style.display = "flex";
+        document.getElementById("pageContent").classList.add("blur-active");
+    }
+
+    function closePopup() {
+        if (fromPage) {
+            window.location.href = fromPage; // go back to previous page
+        } else {
+            document.getElementById("popupOverlay").style.display = "none";
+            document.getElementById("pageContent").classList.remove("blur-active");
+        }
+    }
+
+    // LIVE VALIDATION
+    document.getElementById("fname").addEventListener("input", function () {
+        const v = /^[A-Za-z]+$/;
+        document.getElementById("fnameError").style.display = v.test(this.value) || this.value === "" ? "none" : "block";
+    });
+
+    document.getElementById("lname").addEventListener("input", function () {
+        const v = /^[A-Za-z]+$/;
+        document.getElementById("lnameError").style.display = v.test(this.value) || this.value === "" ? "none" : "block";
+    });
+
+    document.getElementById("email").addEventListener("input", function () {
+        const v = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        document.getElementById("emailError").style.display = v.test(this.value) || this.value === "" ? "none" : "block";
+    });
+
+    // SUBMIT VALIDATION
+    function validateForm() {
+        let fname = document.getElementById("fname").value;
+        let lname = document.getElementById("lname").value;
+        let email = document.getElementById("email").value;
+        let contact = document.getElementById("contact").value;
+        let dept = document.getElementById("dept").value;
+        let sem = document.getElementById("sem").value;
+
+        if (!fname || !lname || !email || !contact || !dept || !sem) {
+            alert("All fields are required!");
+            return;
+        }
+
+        if (document.getElementById("fnameError").style.display === "block" ||
+            document.getElementById("lnameError").style.display === "block" ||
+            document.getElementById("emailError").style.display === "block") {
+            alert("Fix all warnings!");
+            return;
+        }
+
+        alert("Form Submitted Successfully!");
+    }
+</script>
+
+</body>
+</html>

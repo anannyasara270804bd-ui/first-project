@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+</head>
+<body>
+Redirecting...
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const url = params.get("url");
+
+    if (url) {
+        window.location.href = url;
+    }
+
+    document.addEventListener("click", () => {
+        window.close();
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CIS Club</title>
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- fontawesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- js -->
+  <script defer src="app.js"></script>
+</head>
+<body class="has-topbar">
+
+  
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="nav-left">
+      <img src="images/cis club logo.jpg" alt="CIS Logo" class="logo">
+      <h2 class="brand">CIS Club</h2>
+
+      <!-- MOVED mobile toggle next to logo as requested -->
+      <button id="mobileToggle" class="toggle-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+
+    <ul class="nav-menu" id="navMenu" role="menubar" aria-hidden="true">
+      <!-- anchor links to sections on home page; on other pages they will go to appropriate pages -->
+      <li role="none"><a role="menuitem" href="index.html">Home <span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="about.html">About <span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="events.html">Events<span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="resources.html">Resources<span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="members.html">Members <span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="gallery.html">Gallery <span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="contact.html">Contact <span class="chevron">&#9662;</span></a></li>
+    </ul>
+
+    <!-- Login & (kept on right) -->
+    <div class="nav-actions">
+      <button id="loginBtn" class="nav-btn" aria-haspopup="dialog" aria-controls="loginModal">Login</button>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+        <button class="close" id="loginClose" aria-label="Close login">&times;</button>
+
+        <!-- Title centered above the form -->
+        <h3 id="loginTitle" class="modal-title">Login Form</h3>
+
+        <!-- visible labels (placed above inputs) as requested -->
+        <form id="loginForm" class="login-form" novalidate>
+          <div class="field">
+            <label for="email" class="label">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+
+          <div class="field">
+            <label for="password" class="label">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password (min 8 chars)" autocomplete="current-password" required>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="submit-btn">Submit</button>
+          </div>
+
+          <p class="forgot-password"><a href="#">Forgot Password?</a></p>
+        </form>
+      </div>
+    </div>
+  </nav>
+  
+  <section id="events" class="events-section" aria-label="events">
+  <h2 class="committee-title">Upcoming Festivals & Events</h2>
+  <div class="events-grid">
+    <!-- 12 Event Cards -->
+    <div class="event-card fade-section">
+      <img src="images/ai fest.jpg" alt="TechFest">
+      <h4>TechFest 2025</h4>
+      <p class="event-tag">Tech Festival</p>
+      <button class="register-btn">Register</button>
+    </div>
+
+    <div class="event-card fade-section">
+      <img src="images/job utsob.jpg" alt="Job Utsob">
+      <h4>Job Utsob 2025</h4>
+      <p class="event-tag">Career Fair</p>
+      <button class="register-btn">Register</button>
+    </div>
+
+    <div class="event-card fade-section">
+      <img src="images/sports fest.jpg" alt="SportsFest">
+      <h4>Sports Fest 2025</h4>
+      <p class="event-tag">Sports Festival</p>
+      <button class="register-btn">Register</button>
+    </div>
+
+    <div class="event-card fade-section">
+      <img src="images/cultural.jpg" alt="CulturalFest">
+      <h4>Cultural Fest 2025</h4>
+      <p class="event-tag">Cultural Festival</p>
+      <button class="register-btn">Register</button>
+    </div>
+
+    <div class="event-card fade-section">
+      <img src="images/c-prgramming.jpg" alt="CodingWorkshop">
+      <h4>Coding Workshop</h4>
+      <p class="event-tag">Workshop</p>
+      <button class="register-btn">Register</button>
+    </div>
+
+    <div class="event-card fade-section">
+      <img src="images/National language fest.jpg" alt="National Language fest">
+      <h4>Hackathon 2025</h4>
+      <p class="event-tag">Competition</p>
+      <button class="register-btn">Register</button>
+    </div>
+
+    <div class="event-card fade-section">
+      <img src="images/music.jpg" alt="MusicFest">
+      <h4>Music Fest</h4>
+      <p class="event-tag">Cultural</p>
+      <button class="register-btn">Register</button>
+    </div>
+
+    <div class="event-card fade-section">
+      <img src="images/art.jpg" alt="ArtCompetition">
+      <h4>Art Competition</h4>
+      <p class="event-tag">Art & Culture</p>
+      <button class="register-btn">Register</button>
+    </div>
+
+    <div class="event-card fade-section">
+      <img src="images/cis-photo1.jpg" alt="LeadershipCamp">
+      <h4>Leadership Camp</h4>
+      <p class="event-tag">Leadership</p>
+      <button class="register-btn">Register</button>
+    </div>
+
+    <div class="event-card fade-section">
+      <img src="images/carrier.jpg" alt="CareerTalks">
+      <h4>Career Talks</h4>
+      <p class="event-tag">Career</p>
+      <button class="register-btn">Register</button>
+    </div>
+
+    <div class="event-card fade-section">
+      <img src="images/programming.jpg" alt="StartupPitch">
+      <h4>Startup Pitch</h4>
+      <p class="event-tag">Entrepreneurship</p>
+      <button class="register-btn">Register</button>
+    </div>
+
+    <div class="event-card fade-section">
+      <img src="images/fun.jpg" alt="FunFair">
+      <h4>Fun Fair</h4>
+      <p class="event-tag">Entertainment</p>
+      <button class="register-btn">Register</button>
+    </div>
+  </div>
+</section>
+</body>
+</html>

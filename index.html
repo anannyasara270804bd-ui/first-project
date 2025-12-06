@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CIS Club</title>
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- fontawesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- js -->
+  <script defer src="app.js"></script>
+</head>
+<body class="has-topbar">
+
+  <!-- TOPBAR (home page only - keep as you gave) -->
+  <div class="topbar" id="topbar">
+    <p>Call: 016639507665 || Mail: cisclub@diu.edu.bd</p>
+    <div class="social">
+      <a href="https://www.facebook.com/diucisclub" aria-label="facebook"><i class="fab fa-facebook"></i></a>
+      
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="nav-left">
+      <img src="images/cis club logo.jpg" alt="CIS Logo" class="logo">
+      <h2 class="brand">CIS Club</h2>
+
+      <!-- MOVED mobile toggle next to logo as requested -->
+      <button id="mobileToggle" class="toggle-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+
+    <ul class="nav-menu" id="navMenu" role="menubar" aria-hidden="true">
+      <!-- anchor links to sections on home page; on other pages they will go to appropriate pages -->
+      <li role="none"><a role="menuitem" href="index.html">Home <span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="about.html">About <span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="events.html">Events<span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="resources.html">Resources<span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="members.html">Members <span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="gallery.html">Gallery <span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="contact.html">Contact <span class="chevron">&#9662;</span></a></li>
+    </ul>
+
+    <!-- Login & (kept on right) -->
+    <div class="nav-actions">
+      <button id="loginBtn" class="nav-btn" aria-haspopup="dialog" aria-controls="loginModal">Login</button>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+        <button class="close" id="loginClose" aria-label="Close login">&times;</button>
+
+        <!-- Title centered above the form -->
+        <h3 id="loginTitle" class="modal-title">Log-in</h3>
+
+        <!-- visible labels (placed above inputs) as requested -->
+        <form id="loginForm" class="login-form" novalidate>
+          <div class="field">
+            <label for="email" class="label">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+
+          <div class="field">
+            <label for="password" class="label">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password (min 8 chars)" autocomplete="current-password" required>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="submit-btn">Submit</button>
+          </div>
+
+          <p class="forgot-password"><a href="#">Forgot Password?</a></p>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION (slider) -->
+  <section id="hero" class="hero" aria-label="Hero">
+    <div class="heroslider" id="heroSlider" aria-live="off">
+      
+      
+    </div>
+
+    <!-- dots -->
+    <div class="sliderdots" id="sliderDots" aria-hidden="false"></div>
+
+    <!-- centered content -->
+    <div class="hero-content">
+      <h1>Welcome to CIS Club</h1>
+      <p>Learn, Grow & Achieve Together</p>
+      <a class="heroJoin" href="joinus.html?from=index.html">Join Us</a>
+    </div>
+  </section>
+
+  <!-- WINGS -->
+  <section id="wings" class="wings" aria-label="wings">
+    <div class="wing-card">
+      <span class="icon" aria-hidden="true">💻</span>
+      <h3>Programming Wing</h3>
+      <p>Workshops, hackathons and peer coding sessions to build practical skills and portfolio projects.</p>
+    </div>
+
+    <div class="wing-card">
+      <span class="icon" aria-hidden="true">🎭</span>
+      <h3>Cultural Wing</h3>
+      <p>We celebrate culture: music, drama and festivals — building a vibrant and inclusive club community.</p>
+    </div>
+
+    <div class="wing-card">
+      <span class="icon" aria-hidden="true">🏆</span>
+      <h3>Sports Wing</h3>
+      <p>Inter-college tournaments, physical fitness activities and team events for healthy competition.</p>
+    </div>
+
+    <div class="wing-card">
+      <span class="icon" aria-hidden="true">👑</span>
+      <h3>Leadership Wing</h3>
+      <p>Leadership workshops and idea labs to groom future organizers and team leads.</p>
+    </div>
+  </section>
+
+  <!-- MISSION & HISTORY -->
+  <section id="about" class="mission-section" aria-label="mission and history">
+    <div class="mission-box">
+      <h3>Our Mission</h3>
+      <p>To build practical skills, foster creativity, and provide a platform for students to learn and lead.</p>
+    </div>
+
+    <div class="mission-box">
+      <h3>Our History</h3>
+      <p>Founded by passionate students, CIS Club has organized dozens of events and nurtured student talent since its inception.</p>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE CIS CLUB (new) -->
+  <section id="why" class="why-section" aria-label="why choose cis club">
+    <h2 class="section-title">Why Choose CIS Club?</h2>
+    <div class="why-grid">
+      <div class="why-box">Skill Development & Workshops</div>
+      <div class="why-box">Real Projects & Demos</div>
+      <div class="why-box">Leadership & Teamwork</div>
+      <div class="why-box">Career Support & Networking</div>
+      <div class="why-box">Competitions & Recognition</div>
+      <div class="why-box">Community & Events</div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section id="events" class="events-section" aria-label="events">
+    <h2 class="committee-title">Festivals & Events</h2>
+    <div class="events-grid">
+      <div class="event-card">
+        <img src="images/ai fest.jpg" alt="TechFest">
+        <h4>TechFest 2025</h4>
+        <p class="event-tag">Tech Festival</p>
+      </div>
+      <div class="event-card">
+        <img src="images/job utsob.jpg" alt="JobUtsob">
+        <h4>Job Utsob 2025</h4>
+        <p class="event-tag">Career Fair</p>
+      </div>
+      <div class="event-card">
+        <img src="images/sports fest.jpg" alt="SportsFest">
+        <h4>Sports Fest 2025</h4>
+        <p class="event-tag">Sports Festival</p>
+      </div>
+      <div class="event-card">
+        <img src="images/cultural.jpg" alt="CulturalFest">
+        <h4>Cultural Fest 2025</h4>
+        <p class="event-tag">Cultural Festival</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAST EVENT GALLERY -->
+  <section id="gallery" class="gallery-section" aria-label="past event gallery">
+    <h2 class="section-title">Past Event Gallery</h2>
+    <div class="gallery-grid" id="galleryGrid">
+      <img class="g-img" src="images/cis-photo19.jpg" alt="past 1">
+      <img class="g-img" src="images/cis-photo24.jpg" alt="past 2">
+      <img class="g-img" src="images/cis-photo1.jpg" alt="past 3">
+      <img class="g-img" src="images/cis-photo5.jpg" alt="past 4">
+      <img class="g-img" src="images/cis-photo9.jpg" alt="past 5">
+      <img class="g-img" src="images/cis-photo3.jpg" alt="past 6">
+      <img class="g-img" src="images/cis-photo7.jpg" alt="past 7">
+      <img class="g-img" src="images/cis-photo24.jpg" alt="past 8">
+    </div>
+  </section>
+
+  <!-- Lightbox for gallery -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+    <img id="lightbox-img" alt="expanded photo">
+  </div>
+
+  <!-- CONTACT / FOOTER ANCHOR -->
+  <section id="contact" class="contact-section" aria-label="contact">
+    <!-- kept simple - contact info also in footer -->
+  </section>
+
+  <!-- FOOTER (compact) -->
+  <footer class="site-footer" aria-label="footer">
+    <div class="footer-columns">
+      <div class="footer-about">
+        <img src="images/cis club logo.jpg" alt="CIS Logo" class="footer-logo">
+        <h4>About CIS Club</h4>
+        <p>Student-run club focused on computing, culture and leadership. Join events, learn and grow with us.</p>
+        <div class="social-row">
+          <a href="https://www.facebook.com/diucisclub"><i class="fab fa-facebook"></i></a><br>
+          
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="members.html">Members</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>01639507665<br>cisclub@diu.edu.bd</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 CIS Club.Developed by Ananya Shareen Sara</p>
+    </div>
+  </footer>
+
+  <!-- Back To Top -->
+  <button id="topBtn" title="Back to top">↑</button>
+
+</body>
+</html>

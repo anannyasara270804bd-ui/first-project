@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CIS Club</title>
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- fontawesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- js -->
+  <script defer src="app.js"></script>
+</head>
+<body class="has-topbar">
+
+  
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="nav-left">
+      <img src="images/cis club logo.jpg" alt="CIS Logo" class="logo">
+      <h2 class="brand">CIS Club</h2>
+
+      <!-- MOVED mobile toggle next to logo as requested -->
+      <button id="mobileToggle" class="toggle-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+
+    <ul class="nav-menu" id="navMenu" role="menubar" aria-hidden="true">
+      <!-- anchor links to sections on home page; on other pages they will go to appropriate pages -->
+      <li role="none"><a role="menuitem" href="index.html">Home <span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="about.html">About <span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="events.html">Events<span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="resources.html">Resources<span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="members.html">Members <span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="gallery.html">Gallery <span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="contact.html">Contact <span class="chevron">&#9662;</span></a></li>
+    </ul>
+
+    <!-- Login & (kept on right) -->
+    <div class="nav-actions">
+      <button id="loginBtn" class="nav-btn" aria-haspopup="dialog" aria-controls="loginModal">Login</button>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+        <button class="close" id="loginClose" aria-label="Close login">&times;</button>
+
+        <!-- Title centered above the form -->
+        <h3 id="loginTitle" class="modal-title">Login Form</h3>
+
+        <!-- visible labels (placed above inputs) as requested -->
+        <form id="loginForm" class="login-form" novalidate>
+          <div class="field">
+            <label for="email" class="label">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+
+          <div class="field">
+            <label for="password" class="label">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password (min 8 chars)" autocomplete="current-password" required>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="submit-btn">Submit</button>
+          </div>
+
+          <p class="forgot-password"><a href="#">Forgot Password?</a></p>
+        </form>
+      </div>
+    </div>
+  </nav>
+   <div class="gallery-container">
+  <h1 class="gallery-title">CIS Club Gallery</h1>
+  <p class="gallery-title">Moments we captured • Achievements we celebrated</p>
+</div>
+
+<section>
+
+  <div class="gallery-grid">
+
+    
+    <div class="gallery-img"> <img src="images/cis-photo1.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo2.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo3.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo44.jpg " alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo33.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo5.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo6.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo7.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo8.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo9.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo11.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo12.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo13.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo17.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo19.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo21.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo22.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo23.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo24.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo11.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo12.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo13.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo17.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo19.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo21.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo22.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo23.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo24.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo25.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/is-photo25.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo55.jpg" alt="photo"></div>
+    <div class="gallery-img"> <img src="images/cis-photo7.jpg" alt="photo"></div>
+ 
+     </div>
+     <!-- FULL SCREEN POPUP -->
+<div id="lightbox"class="lightbox" aria-hidden="true">
+  <img id="lightbox-img"src="">
+    
+</div>
+
+</body>
+</html>

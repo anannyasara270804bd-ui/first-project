@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CIS Club</title>
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- fontawesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- js -->
+  <script defer src="app.js"></script>
+</head>
+<body class="has-topbar">
+
+  
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="nav-left">
+      <img src="images/cis club logo.jpg" alt="CIS Logo" class="logo">
+      <h2 class="brand">CIS Club</h2>
+
+      <!-- MOVED mobile toggle next to logo as requested -->
+      <button id="mobileToggle" class="toggle-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+
+    <ul class="nav-menu" id="navMenu" role="menubar" aria-hidden="true">
+      <!-- anchor links to sections on home page; on other pages they will go to appropriate pages -->
+      <li role="none"><a role="menuitem" href="index.html">Home <span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="about.html">About <span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="events.html">Events<span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="resources.html">Resources<span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="members.html">Members<span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="gallery.html">Gallery <span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="contact.html">Contact <span class="chevron">&#9662;</span></a></li>
+    </ul>
+
+    <!-- Login & (kept on right) -->
+    <div class="nav-actions">
+      <button id="loginBtn" class="nav-btn" aria-haspopup="dialog" aria-controls="loginModal">Login</button>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+        <button class="close" id="loginClose" aria-label="Close login">&times;</button>
+
+        <!-- Title centered above the form -->
+        <h3 id="loginTitle" class="modal-title">Login Form</h3>
+
+        <!-- visible labels (placed above inputs) as requested -->
+        <form id="loginForm" class="login-form" novalidate>
+          <div class="field">
+            <label for="email" class="label">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+
+          <div class="field">
+            <label for="password" class="label">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password (min 8 chars)" autocomplete="current-password" required>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="submit-btn">Submit</button>
+          </div>
+
+          <p class="forgot-password"><a href="#">Forgot Password?</a></p>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- ABOUT PAGE CONTENT START -->
+<div class="about-page">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>About CIS Club</h1>
+                <p>Connecting students with technology, innovation, and collaboration to create a brighter future together.</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- MISSION & HISTORY BOXES -->
+    <section class="info-section">
+        <div class="info-container">
+            <div class="info-box">
+                <h2>Our Mission</h2>
+                <p>
+                    CIS Club aims to provide students with a platform to explore, innovate, and grow in the field of computing. 
+                    We organize workshops, coding challenges, and collaborative projects to enhance practical skills and teamwork.
+                </p>
+            </div>
+            <div class="info-box">
+                <h2>Our History</h2>
+                <p>
+                    Established in 2010, CIS Club has been a pioneer in promoting technology awareness in our university. 
+                    Over the years, we have hosted numerous tech events, competitions, and seminars to foster knowledge and community engagement.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMITTEE SECTION -->
+    <section class="committee-section">
+        <h2 class="section-title">Meet Our Committee</h2>
+
+        <!-- First Row: 4 photos -->
+        <div class="committee-row first-row">
+            <div class="member"><img src="images/team-photo1.jpg" alt="Member 1"></div>
+            <div class="member"><img src="images/team-photo2.jpg" alt="Member 2"></div>
+            <div class="member"><img src="images/team-photo3.jpg" alt="Member 3"></div>
+            <div class="member"><img src="images/team-photo4.jpg" alt="Member 4"></div>
+        </div>
+
+        <!-- Next Rows: 6 photos each -->
+        <div class="committee-row">
+            <div class="member"><img src="images/team-photo5.jpg" alt="Member 5"></div>
+            <div class="member"><img src="images/team-photo6.jpg" alt="Member 6"></div>
+            <div class="member"><img src="images/team-photo7.jpg" alt="Member 7"></div>
+            <div class="member"><img src="images/team-photo8.jpg" alt="Member 8"></div>
+            <div class="member"><img src="images/team-photo9.jpg" alt="Member 9"></div>
+            <div class="member"><img src="images/team-photo10.jpg" alt="Member 10"></div>
+        </div>
+
+        <div class="committee-row">
+            <div class="member"><img src="images/team-photo11.jpg" alt="Member 11"></div>
+            <div class="member"><img src="images/team-photo12.jpg" alt="Member 12"></div>
+            <div class="member"><img src="images/team-photo13.jpg" alt="Member 13"></div>
+            <div class="member"><img src="images/team-photo14.jpg" alt="Member 14"></div>
+            <div class="member"><img src="images/team-photo15.jpg" alt="Member 15"></div>
+            <div class="member"><img src="images/team-photo16.jpg" alt="Member 16"></div>
+        </div>
+
+        <div class="committee-row">
+            <div class="member"><img src="images/team-photo17.jpg" alt="Member 17"></div>
+            <div class="member"><img src="images/team-photo18.jpg" alt="Member 18"></div>
+            <div class="member"><img src="images/team-photo19.jpg" alt="Member 19"></div>
+            <div class="member"><img src="images/team-photo20.jpg" alt="Member 20"></div>
+            <div class="member"><img src="images/team-photo21.jpg" alt="Member 21"></div>
+            <div class="member"><img src="images/team-photo22.jpg" alt="Member 22"></div>
+        </div>
+
+        <div class="committee-row">
+            <div class="member"><img src="images/team-photo23.jpg" alt="Member 23"></div>
+            <div class="member"><img src="images/team-photo24.jpg" alt="Member 24"></div>
+            <div class="member"><img src="images/team-photo25.jpg" alt="Member 25"></div>
+            <div class="member"><img src="images/team-photo26.jpg" alt="Member 26"></div>
+            <div class="member"><img src="images/team-photo27.jpg" alt="Member 27"></div>
+            <div class="member"><img src="images/team-photo28.jpg" alt="Member 28"></div>
+        </div>
+
+        <div class="committee-row">
+            <div class="member"><img src="images/team-photo29.jpg" alt="Member 29"></div>
+            <div class="member"><img src="images/team-photo31.jpg" alt="Member 30"></div>
+            <div class="member"><img src="images/team-photo21.jpg" alt="Member 21"></div>
+            <div class="member"><img src="images/team-photo22.jpg" alt="Member 22"></div>
+            <div class="member"><img src="images/team-photo33.jpg" alt="Member 31"></div>
+            <div class="member"><img src="images/team-photo32.jpg" alt="Member 32"></div>
+
+        </div>
+
+    </section>
+
+</div>
+<!-- ABOUT PAGE CONTENT END -->
+</body>
+</html>

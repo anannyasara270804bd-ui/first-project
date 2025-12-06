@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CIS Club</title>
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- fontawesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- js -->
+  <script defer src="app.js"></script>
+</head>
+<body class="has-topbar">
+
+  
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="nav-left">
+      <img src="images/cis club logo.jpg" alt="CIS Logo" class="logo">
+      <h2 class="brand">CIS Club</h2>
+
+      <!-- MOVED mobile toggle next to logo as requested -->
+      <button id="mobileToggle" class="toggle-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+
+    <ul class="nav-menu" id="navMenu" role="menubar" aria-hidden="true">
+      <!-- anchor links to sections on home page; on other pages they will go to appropriate pages -->
+      <li role="none"><a role="menuitem" href="index.html">Home <span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="about.html">About <span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="events.html">Events<span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="resources.html">Resources<span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="members.html">Members <span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="gallery.html">Gallery <span class="chevron">&#9662;</span></a></li>
+      <li role="none"><a role="menuitem" href="contact.html">Contact <span class="chevron">&#9662;</span></a></li>
+    </ul>
+
+    <!-- Login & (kept on right) -->
+    <div class="nav-actions">
+      <button id="loginBtn" class="nav-btn" aria-haspopup="dialog" aria-controls="loginModal">Login</button>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+        <button class="close" id="loginClose" aria-label="Close login">&times;</button>
+
+        <!-- Title centered above the form -->
+        <h3 id="loginTitle" class="modal-title">Login Form</h3>
+
+        <!-- visible labels (placed above inputs) as requested -->
+        <form id="loginForm" class="login-form" novalidate>
+          <div class="field">
+            <label for="email" class="label">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+
+          <div class="field">
+            <label for="password" class="label">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password (min 8 chars)" autocomplete="current-password" required>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="submit-btn">Submit</button>
+          </div>
+
+          <p class="forgot-password"><a href="#">Forgot Password?</a></p>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- MAIN CONTENT START -->
+<div class="main-content">
+
+    <!-- RESOURCES ROW 1 -->
+    <div class="resources-row">
+        <!-- SECTION 1 -->
+        <section class="resource-section">
+          <h2 class="section-title">Important Links</h2>
+            <div class="resources-column">
+                <div class="resource-box"><a href="redirect.html?url=https://daffodilvarsity.edu.bd/" target="_blank">DIU Portal</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://elearn.daffodilvarsity.edu.bd/" target="_blank">BLC</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://daffodilvarsity.edu.bd/article/1card-diu" target="_blank">OneCard</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://library.daffodilvarsity.edu.bd/" target="_blank">DIU Library</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://www.facebook.com/diucisclub" target="_blank">CIS club-fb page link</a></div>
+            </div>
+            
+        </section>
+
+        <!-- SECTION 2 -->
+        <section class="resource-section">
+            
+              <h2 class="section-title">Tools & Software</h2>
+            <div class="resources-column">
+                <div class="resource-box"><a href="redirect.html?url=https://www.facebook.com/diucisclub" target="_blank">VS Code Download</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://www.codeblocks.org/downloads/" target="_blank">code blocks Download</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://www.mysql.com/products/workbench/" target="_blank">MySQL Workbench</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://github.com/" target="_blank"> Github</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://www.python.org/" target="_blank">Python Installer</a></div>
+            </div>
+                
+        </section>
+
+        <!-- SECTION 3 -->
+        <section class="resource-section">
+            <h2 class="section-title">Programming Resources</h2>
+            <div class="resources-column">
+                <div class="resource-box"><a href="redirect.html?url=https://pythoncheatsheet.org/" target="_blank">Python Cheat Sheet</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://www.codewithharry.com/blogpost/javascript-cheatsheet" target="_blank">JavaScript Cheat Sheet</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://www.geeksforgeeks.org/sql/sql-cheat-sheet/" target="_blank">SQL Cheat Sheet</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://www.programiz.com/sql/online-compiler/" target="_blank">Online Compiler</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://algorithm-visualizer.org/" target="_blank">Algorithm Visualizer</a></div>
+            </div>
+        </section>
+    </div>
+
+    <!-- RESOURCES ROW 2 -->
+    <div class="resources-row">
+        <!-- SECTION 4 -->
+        <section class="resource-section">
+            <h2 class="section-title">Motivational Book</h2>
+            <div class="resources-column">
+                <div class="resource-box"><a href="redirect.html?url=http://www.gutenberg.org/ebooks/2274" target="_blank">How to live on 24 Hours a Day-Arnold Bannettc</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://lawyersofpakistan.com/wp-content/uploads/power-subconscious-mind.pdf" target="_blank">The Power of Your Subconscious Mindh-Dr Joseph Murphy</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://apex.oracle.com/pls/apex/lonestar/r/files/static/v13Y/Think-And-Grow-Rich_2011-06.pdf" target="_blank">Think and Grow Rich-Napoleon Hill</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://dn790006.ca.archive.org/0/items/TheArtOfWarBySunTzu/ArtOfWar.pdf" target="_blank">The Art of War-Sun Tzu</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://antilogicalism.com/wp-content/uploads/2017/07/mans-search-for-meaning.pdf" target="_blank">Man's Search for Meaning-Victor Frankle</search></a></div>
+            </div>
+        </section>
+
+        <!-- SECTION 5 -->
+        <section class="resource-section">
+          <h2 class="section-title">Project Resources</h2>
+            <div class="resources-column">
+             
+                <div class="resource-box"><a href="redirect.html?url=https://www.geeksforgeeks.org/css/top-10-projects-for-beginners
+                  -to-practice-html-and-css-skills/" target="_blank">HTML-CSS project </a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://github.com/labnol/javascript-starter" target="_blank">JavaScript Starter Pack</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://www.youtube.com/watch?v=Rp5vd34d-z4" target="_blank">Django Project Base</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://www.cse.msu.edu/~cse435/Handouts/SRSExample-webapp.doc" target="_blank">SRS Document Example</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://www.lucidchart.com/pages/er-diagrams" target="_blank">ERD Diagram Sample</a></div>
+            </div>
+            
+        </section>
+
+        <!-- SECTION 6 -->
+        <section class="resource-section">
+          <h2 class="section-title">Study Materials</h2>
+            <div class="resources-column">
+                <div class="resource-box"><a href="redirect.html?url=https://www.vssut.ac.in/lecture_notes/lecture1424354156.pdf" target="_blank">C Programming Notes</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://mrcet.com/downloads/digital_notes/CSE/II%20Year/DBMS.pdf" target="_blank">DBMS PDF</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/" target="_blank">DSA Lecture Slides</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://cyber.gov.gr/wp-content/uploads/2025/03/Cybersecurity-Handbook-English-version-compressed.pdf" target="_blank"></a>Cybersecurity notes</div>
+                <div class="resource-box"><a href="redirect.html?url=https://www.computernetworkingnotes.com/" target="_blank"> Computer Networking Notes</a></div>
+            </div>
+            
+        </section>
+    </div>
+
+    <!-- RESOURCES ROW 3 -->
+    <div class="resources-row">
+        <!-- SECTION 7 -->
+        <section class="resource-section">
+            <h2 class="section-title">Career Resources</h2>
+            <div class="resources-column">
+                <div class="resource-box"><a href="redirect.html?url=https://www.youtube.com/watch?v=mSYPgwkGlKg" target="_blank">CV Templates</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://www.youtube.com/watch?v=GxmfcnU3feo" target="_blank">Web Dev Roadmap</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://www.youtube.com/watch?v=yqakdxBXe98" target="_blank">AI/ML Roadmap</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://www.youtube.com/watch?v=v7BNtpw53AA" target="_blank">Cybersecurity Guide</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://internship.daffodilvarsity.edu.bd/" target="_blank">Internship Portals</a></div>
+            </div>
+        </section>
+
+        <!-- SECTION 8 -->
+        <section class="resource-section">
+            h2 class="section-title">AI & Tools Section</h2>
+            <div class="resources-column">
+                <div class="resource-box"><a href="redirect.html?url=https://chatgpt.com/" target="_blank">Chatgpt</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://codium.com/" target="_blank">Codeium</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://www.tabnine.com/" target="_blank">Tabnine</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://www.canva.com/ai-assistant/" target="_blank">Canva AI</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://www.deepseek.com/" target="_blank">Deep seek</a></div>
+            </div>
+        </section>
+
+        <!-- SECTION 9 -->
+        <section class="resource-section">
+            <h2 class="section-title">Fun and Engagement Idea</h2>
+            <div class="resources-column">
+                <div class="resource-box"><a href="redirect.html?url=https://animoto.com/blog/video-tips/fun-facts-about-me-example-answers">Fun Fact</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://caniphish.com/blog/technology-memes">Tech Memes</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://programmerhumor.io/memes/coding-fails">coding Fails</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://poki.com/en/mini">Mini Games</a></div>
+                <div class="resource-box"><a href="redirect.html?url=https://funny-jokes.netlify.app/">Random Joke Genarator</a></div>
+            </div>
+        </section>
+    </div>
+
+</div>
+<!-- MAIN CONTENT END -->
+</body>
+</html>
