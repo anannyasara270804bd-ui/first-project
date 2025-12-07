@@ -134,7 +134,7 @@ body.no-topbar .navbar { top: 0; }
    WINGS
    =========================== */
 .wings{
-  padding:60px 10%;
+  padding:0px 40px;
   display:grid;
   justify-content:center;
   align-items:center;
@@ -961,6 +961,7 @@ body.no-topbar .navbar { top: 0; }
   }
 
 }
+
 
 
 
