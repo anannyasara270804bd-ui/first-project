@@ -135,7 +135,7 @@ body.no-topbar .navbar { top: 0; }
    =========================== */
 .wings{
   padding:42px 10%;
-  display:flex;
+  display:grid;
   justify-content:center;
   align-items:center;
   grid-template-columns: repeat(4, 1fr);
@@ -961,4 +961,5 @@ body.no-topbar .navbar { top: 0; }
   }
 
 }
+
 
