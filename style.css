@@ -135,7 +135,9 @@ body.no-topbar .navbar { top: 0; }
    =========================== */
 .wings{
   padding:42px 10%;
-  display:grid;
+  display:flex;
+  justify-content:center;
+  align-items:center;
   grid-template-columns: repeat(4, 1fr);
   gap:20px;
 }
@@ -957,4 +959,5 @@ body.no-topbar .navbar { top: 0; }
   .stat-card {
     width: 100%;
   }
+
 }
